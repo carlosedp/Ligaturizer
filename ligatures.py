@@ -95,10 +95,10 @@ ligatures = [
         'chars': ['asterisk', 'greater'],
         'firacode_ligature_name': 'asterisk_greater.liga',
     },
-    {   # */
-        'chars': ['asterisk', 'slash'],
-        'firacode_ligature_name': 'asterisk_slash.liga',
-    },
+    # {   # */
+    #     'chars': ['asterisk', 'slash'],
+    #     'firacode_ligature_name': 'asterisk_slash.liga',
+    # },
     {   # \/
         'chars': ['backslash', 'slash'],
         'firacode_ligature_name': 'backslash_slash.liga',
