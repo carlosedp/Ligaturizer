@@ -563,10 +563,10 @@ ligatures = [
         'chars': ['semicolon', 'semicolon'],
         'firacode_ligature_name': 'semicolon_semicolon.liga',
     },
-    {   # /*
-        'chars': ['slash', 'asterisk'],
-        'firacode_ligature_name': 'slash_asterisk.liga',
-    },
+    # {   # /*
+    #     'chars': ['slash', 'asterisk'],
+    #     'firacode_ligature_name': 'slash_asterisk.liga',
+    # },
     {   # /\
         'chars': ['slash', 'backslash'],
         'firacode_ligature_name': 'slash_backslash.liga',

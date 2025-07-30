@@ -2,7 +2,7 @@
 # Created by https://www.gitignore.io/api/font,linux,macos,python,fontforge,pycharm+all,sublimetext,visualstudiocode
 
 ### FontForge ###
-*.sfd-* 
+*.sfd-*
 *.sfd~
 
 # No Binaries
@@ -251,5 +251,11 @@ GitHub.sublime-settings
 !.vscode/launch.json
 !.vscode/extensions.json
 .history
+
+# Input and output files
+input/*.otf
+input/*.ttf
+output/*.otf
+output/*.ttf
 
 # End of https://www.gitignore.io/api/font,linux,macos,python,fontforge,pycharm+all,sublimetext,visualstudiocode

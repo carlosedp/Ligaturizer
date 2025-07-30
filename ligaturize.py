@@ -27,13 +27,13 @@ def get_ligature_source(fontname):
     for weight in ['Bold', 'Retina', 'Medium', 'Regular', 'Light']:
         if fontname.endswith('-' + weight.lower()):
             # Exact match for one of the Fira Code weights
-            return 'fonts/fira/distr/otf/FiraCode-%s.otf' % weight
+            return 'fonts/firacode_4/FiraCode-%s.otf' % weight
 
     # No exact match. Guess that we want 'Bold' if the font name has 'bold' or
     # 'heavy' in it, and 'Regular' otherwise.
     if 'bold' in fontname or 'heavy' in fontname:
-        return 'fonts/fira/distr/otf/FiraCode-Bold.otf'
-    return 'fonts/fira/distr/otf/FiraCode-Regular.otf'
+        return 'fonts/firacode_4/FiraCode-Bold.otf'
+    return 'fonts/firacode_4/FiraCode-Regular.otf'
 
 class LigatureCreator(object):
 
@@ -248,7 +248,7 @@ def update_font_metadata(font, new_name):
     replace_sfnt(font, 'WWS Family', new_name)
 
 def ligaturize_font(input_font_file, output_dir, ligature_font_file,
-                    output_name, prefix, **kwargs):
+                    output_name, prefix, suffix, **kwargs):
     font = fontforge.open(input_font_file)
 
     if not ligature_font_file:
@@ -260,6 +260,8 @@ def ligaturize_font(input_font_file, output_dir, ligature_font_file,
         name = font.familyname
     if prefix:
         name = "%s %s" % (prefix, name)
+    if suffix:
+        name = "%s %s" % (name, suffix)
 
     update_font_metadata(font, name)
 
