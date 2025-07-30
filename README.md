@@ -8,12 +8,6 @@ This script copies the ligatures (glyphs and rendering information) from [Fira C
 
 This repo contains a [Fontforge python script](ligaturize.py) that you can use to add the Fira Code ligatures to any font, as well as submodules for some popular coding fonts and [another script](build.py) for ligaturizing all of them at once.
 
-Pre-ligaturized versions are available under [releases](https://github.com/ToxicFrog/Ligaturizer/releases).
-
-Here's a couple examples of the fonts generated: SF Mono & Menlo with ligatures (note the `!=` and `->`):
-![](images/sf-mono.png)
-![](images/menlo.png)
-
 ## Requirements ##
 **This Repo**: You'll need the repo and its submodules, so `git clone` with `--recurse-submodules`.
 
@@ -26,12 +20,11 @@ Here's a couple examples of the fonts generated: SF Mono & Menlo with ligatures 
 
 Use automatic mode to easily convert 1 or more font(s).
 
-1.  Put the font(s) you want into `fonts/`.
-1.  Edit `ligatures.py` to disable any ligatures you don't want, and/or enable any (non-ligature) characters you want from Fira Code in addition to the ligatures.
-1.  Edit `build.py` to add your new font(s) to the `prefixed_fonts` list. It supports globbing, so if (e.g.) you want to ligaturize all the different weights of FooFont you can add `'FooFont*'` to the list.
-1.  Run `make`.
-1.  Retrieve the ligaturized fonts from `fonts/output/`.
-1.  The output fonts will be renamed with the prefix "Liga".
+1.  Put the font(s) you want into `input/`.
+2.  Edit `ligatures.py` to disable any ligatures you don't want, and/or enable any (non-ligature) characters you want from Fira Code in addition to the ligatures.
+3.  Run `make`.
+4.  Retrieve the ligaturized fonts from `output/`.
+5.  The output fonts will be renamed with the suffix "Liga".
 
 ### Manual ###
 
